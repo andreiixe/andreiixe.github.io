@@ -11,6 +11,12 @@ Build 3000 (Date 19 Nov 2022)
 -added Email
 -added <a> support (coming soon page)
 
+Build 3007 (Date 11 Dec 2022)
+-Fixed bugs
+-added drawings
+-updated navbar
+-Coming soon pikachu....
+
 /////////////////////////////////////////////////////////
 andreiixe.rf.gd Updates (Shutdown Server)
 ==========================
