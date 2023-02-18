@@ -1,5 +1,11 @@
 andreiixe2.rf.gd Updates
 ==========================
+Build 3010 (Date 18 Dec 2023)
+-updated website
+-deleted links
+-updated index
+-deleted spotify links
+
 Build 3000 (Date 19 Nov 2022)
 -delete all files Website
 -added bootstrap 
