@@ -84,24 +84,24 @@
     player = new YT.Player('video-container', {
       width: '100%',
       height: '100%',
-      videoId: 'GCdwKhTtNNw', // Înlocuiește "GCdwKhTtNNw" cu ID-ul corect al videoclipului tău
+      videoId: 'GCdwKhTtNNw', // Replace "GCdwKhTtNNw" with the correct ID of your video
       playerVars: {
-        autoplay: 1,
+        autoplay: 1, // Add this line to enable autoplay
         controls: 0,
         showinfo: 0,
         modestbranding: 1,
         loop: 1,
-        playlist: 'GCdwKhTtNNw' // Repetă videoclipul
+        playlist: 'GCdwKhTtNNw' // Repeat the video
       },
       events: {
         onReady: function (event) {
-          // event.target.mute(); // Elimină această linie pentru a activa sunetul video-ului
+          event.target.playVideo(); // Add this line to start playing the video
         }
       }
     });
   }
 
-  // Încarcă asincron API-ul YouTube
+  // Asynchronously load the YouTube API
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
