@@ -80,35 +80,36 @@
 </div>
 <script>
   var player;
+
+  // Încarcă și redă video-ul YouTube în fundal
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-container', {
       width: '100%',
       height: '100%',
-      videoId: 'GCdwKhTtNNw', // Replace "GCdwKhTtNNw" with the correct ID of your video
+      videoId: 'GCdwKhTtNNw', // Înlocuiește cu ID-ul video-ului YouTube pe care dorești să-l redai
       playerVars: {
-        autoplay: 1, // Add this line to enable autoplay
-        controls: 0,
-        showinfo: 0,
-        modestbranding: 1,
-        loop: 1,
-        playlist: 'GCdwKhTtNNw' // Repeat the video
+        autoplay: 1, // Redă automat videoclipul
+        controls: 0, // Ascunde controalele video
+        showinfo: 0, // Ascunde titlul și informațiile despre uploader
+        modestbranding: 1, // Ascunde logo-ul YouTube
+        rel: 0, // Dezactivează videoclipurile recomandate după redare
+        loop: 1, // Redă videoclipul în buclă
+        playlist: 'GCdwKhTtNNw' // Necesar pentru redarea în buclă în noul API YouTube Player
       },
       events: {
         onReady: function (event) {
-          event.target.playVideo(); // Add this line to start playing the video
+          event.target.mute();
+          event.target.playVideo(); // Adaugă această linie pentru a începe redarea videoclipului
         }
       }
     });
   }
 
-  // Asynchronously load the YouTube API
+  // Încarcă asincron API-ul YouTube
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 </script>
-
-
-
 </body>
 </html>
