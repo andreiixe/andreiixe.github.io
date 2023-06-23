@@ -3,41 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PikachyDev Website</title>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <style>
-      /* CSS to position the video container */
-      #video-container {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          overflow: hidden;
-      }
-  
-      /* CSS to style the video element */
-      #video-container iframe {
-          width: 100%;
-          height: 100%;
-      }
-  
-      /* CSS to style the rest of the content */
-      body {
-          margin: 0;
-          padding: 0;
-          color: #fff; /* Set the text color for better visibility on the video */
-      }
-  
-      .container {
-          position: relative;
-          z-index: 1;
-      }
-  </style>
-  
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <meta http-equiv="Permissions-Policy" content="web-share=(), interest-cohort=()"/>
 </head>
 <body>
 <!--navbar-->
@@ -55,57 +22,26 @@
         </header>
       </div> 
 <!--center stuff-->
-<!--center stuff-->
-<div id="video-container"></div>
-<div class="px-4 py-5 my-5 text-center text-lol">
-  <h1 class="display-5 fw-bold">Welcome to <span>PikachyDev</span></h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">I want the world in my hands</p>
-  </div>
-</div>
-
+      <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Welcome to <span>PikachyDev</span></h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Back online with something new.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="Projects.html"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Explore</button></a>
+          </div>
+        </div>
+      </div>
 <!--footer-->
-<div class="container">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="https://www.instagram.com/pikachydev" class="nav-link px-2 text-lol">Social</a></li>
-      <li class="nav-item"><a href="https://github.com/PikachyDev" class="nav-link px-2 text-lol">Github</a></li>
-      <li class="nav-item"><a href="mailto: akaiandrei825@gmail.com" class="nav-link px-2 text-lol">Email</a></li>
-    </ul>
-    <p class="text-lolcenter text-lol">&copy; 2022 PikaDev</p>
-  </footer>
-</div>
-<script>
-  var player;
-
-  // Încarcă și redă video-ul YouTube în fundal
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video-container', {
-      width: '100%',
-      height: '100%',
-      videoId: 'GCdwKhTtNNw', // Înlocuiește cu ID-ul video-ului YouTube pe care dorești să-l redai
-      playerVars: {
-        autoplay: 1, // Redă automat videoclipul
-        controls: 0, // Ascunde controalele video
-        showinfo: 0, // Ascunde titlul și informațiile despre uploader
-        modestbranding: 0, // Ascunde logo-ul YouTube
-        rel: 0, // Dezactivează videoclipurile recomandate după redare
-        loop: 1, // Redă videoclipul în buclă
-        playlist: 'GCdwKhTtNNw' // Necesar pentru redarea în buclă în noul API YouTube Player
-      },
-      events: {
-        onReady: function (event) {
-          event.target.playVideo(); // Adaugă această linie pentru a începe redarea videoclipului
-        }
-      }
-    });
-  }
-
-  // Încarcă asincron API-ul YouTube
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-</script>
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="https://www.instagram.com/andreiixe/" class="nav-link px-2 text-muted">Social</a></li>
+            <li class="nav-item"><a href="https://github.com/andreiixe" class="nav-link px-2 text-muted">Github</a></li>
+            <li class="nav-item"><a href="mailto: akaiandrei825@gmail.com" class="nav-link px-2 text-muted">Email</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2022 Andreiixe</p>
+        </footer>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
