@@ -1,3 +1,8 @@
+Version 1.0 Beta 3
+-Updated links
+-fixed bugs
+-Updated name to IOSWebApp
+
 Version 1.0 Beta 2
 -Added Mini WebApps
 -Remove "explore" button
