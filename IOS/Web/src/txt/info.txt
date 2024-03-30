@@ -1,3 +1,6 @@
+Version 1.0 Beta 5 30 Mar 2024
+-Removed text decoration
+
 Version 1.0 Beta 4
 -fixed Buttons (now support modern browsers)
 -fixed mistakes
