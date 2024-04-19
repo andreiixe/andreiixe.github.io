@@ -1,158 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Andreiixe Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" type="image/jpg" href="andreiixe.ico"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-<!--navbar-->
-    <div class="container">
-        <header class="d-flex justify-content-center py-3">
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="Projects.html" class="nav-link active" aria-current="page">Projects</a></li>
-            <!--///////////////////////////-->
-          </ul>
-        </header>
-      </div> 
-<!--svg-->
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-<symbol id="Spotify" viewBox="0 0 16 16">
-    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"></path>
-  </symbol>
-  <symbol id="source" viewBox="0 0 16 16">
-    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z" fill="#000000"></path> <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="#000000"></path>
-  </symbol>
-  <symbol id="source2" viewBox="0 0 16 16">
-    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" fill="#000000"></path> 
-  </symbol>
-</svg>
-
-<div class="container col-xxl-8 px-4 py-5">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-    </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold lh-1 mb-3">Active <span>projects</span></h1>
-    </div>
-  </div>
-</div>
-<!--center stuff-->
-<div class="container px-4 py-5" id="hanging-icons">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#source2"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-2">IOS FrontEnd Andreiixe Website</h3>
-          <p>[HTML, CSS, JS]</p>
-          <p>It is a frontend implementation of the website andreiixe.github.io to be compatible with safari of IOS 5.1.1</p>
-          <a href="IOS/Web/index.html" class="btn btn-primary">
-            Enter
-          </a>
-        </div>
-      </div>
-  </div>
-
-<div class="px-4 py-5 my-5 text-center">
-  <h1 class="display-5 fw-bold">Closed <span>projects</span></h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Projects that are no longer supported by me.</p>
-  </div>
-</div>
-<div class="container px-4 py-5" id="hanging-icons">
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Distopia Website</h3>
-        <p>[HTML, CSS, JS]</p>
-        <p>Official website for the discord server where there are distopiafm and distopia bots.</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">DistopiaFM</h3>
-        <p>[PYTHON]</p>
-        <p>It is a discord bot for the Distopia discord server in which connecting to the radio 24/7 radio to listen in voice channels.</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Distopia Bot</h3>
-        <p>[Python]</p>
-        <p>It is a discord bot in python for a discord server (general use purpose)</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Legalicy Website</h3>
-        <p>[PHP, HTML, CSS]</p>
-        <p>Andreiixe Legacy, which is made for systems that do not support the new styles, supporting older operating systems, i.e. Internet Explorer 4-8 or Netscape. Unfortunately it is no longer active!</p>
-        <a href="https://github.com/andreiixe/LegalicyAndreiixe" class="btn btn-primary">
-          Partial source code
-        </a>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Old Andreiixe website</h3>
-        <p>[HTML, CSS]</p>
-        <p>It is my old code of the website I made the first time ;))</p>
-        <a href="https://github.com/PikachyDev/andreiixe.rf.gd" class="btn btn-primary">
-          Source code
-        </a>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Distopia Lite</h3>
-        <p>[PHP, PYTHON]</p>
-        <p>It is a website for old systems to make the connection between discord and the web without entering our server. Tested on IE 5</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">Files Andreiixe</h3>
-        <p>[HTML]</p>
-        <p>This is where I store files from school or pictures that I can't keep on my PC. This website is not secure.</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#source2"/></svg>
-      </div>
-      <div>
-        <h3 class="fs-2">PikachyDev App</h3>
-        <p>[C++, C#]</p>
-        <p>Never released ;(</p>
-      </div>
-    </div>
-<!--footer-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+<html>
+    <head>
+        <!--Title Website-->
+        <title>Andreiixe Projects</title>
+        <!--Icon Website-->
+        <link rel="shortcut icon" type="image/jpg" href="src/icon/andreiixe.ico"/>
+        <!--View Port for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <!--Bootstrap imports-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary"> 
+          <div class="container-fluid text-success"> 
+              <button class="navbar-toggler"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gfgnavbar"> 
+                  <span class="navbar-toggler-icon"> 
+                  </span> 
+              </button> 
+              <div class="collapse navbar-collapse justify-content-center" 
+                   id="gfgnavbar">
+              <!-- Left links -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about-me.html">About-me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="updates.html">Updates</a>
+                  </li>
+              <!-- Left links -->
+              </div> 
+          </div> 
+      </nav> 
+        <!--Close navbar-->
+          <!--Content Website-->
+          <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Active <span>projects</span></h1>
+              </div>
+            </div>
+          </div>
+          <!--center stuff-->
+          <div class="container px-4 py-5" id="hanging-icons">
+                <div class="col d-flex align-items-start">
+                  <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#source2"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="fs-2">IOS FrontEnd Andreiixe Website</h3>
+                    <p>[HTML, CSS, JS]</p>
+                    <p>Presenting the frontend implementation of andreiixe.github.io, optimized for compatibility with Safari on iOS 5.1.1. Experience seamless browsing and access to the website's features on your vintage iOS device.</p>
+                    <a href="IOS/Web/index.html" class="btn btn-primary">
+                      Enter
+                    </a>
+                  </div>
+                </div>
+            </div>
+          
+          <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">Closed <span>projects</span></h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">Projects that are no longer supported by me.</p>
+            </div>
+          </div>
+          <div class="container px-4 py-5" id="hanging-icons">
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Distopia Website</h3>
+                  <p>[HTML, CSS, JS]</p>
+                  <p>Welcome to the official website of the Discord server housing the fascinating worlds of DistopiaFM and Distopia bots! Dive into a distopian universe where music meets technology, and bots enhance your Discord experience. Explore our community, discover the latest updates, and immerse yourself in the unique blend of music and community interaction. Join us as we journey through the digital frontier of Distopia.</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">DistopiaFM</h3>
+                  <p>[PYTHON]</p>
+                  <p>Introducing the Distopia Bot: your gateway to endless music on the Distopia Discord server. Seamlessly connect to our 24/7 radio stream and enjoy non-stop tunes in your voice channels. Elevate your server experience with the power of music, available at your command.</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Distopia Bot</h3>
+                  <p>[Python]</p>
+                  <p>Meet the Python Discord bot designed for the Distopia server: versatile and ready for any task. Whether you're moderating, entertaining, or organizing, this bot has you covered. Enhance your server experience with its wide range of features and seamless integration.</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Legalicy Website</h3>
+                  <p>[PHP, HTML, CSS]</p>
+                  <p>Introducing Andreiixe Legalicy: built for systems without support for newer styles, catering to older operating systems like Internet Explorer 4-8 or Netscape. While it's no longer active, it remains a testament to bridging the gap between past and present web experiences.</p>
+                  <a href="https://github.com/andreiixe/LegalicyAndreiixe" class="btn btn-primary">
+                    Partial source code
+                  </a>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Old Andreiixe website</h3>
+                  <p>[HTML, CSS]</p>
+                  <p>Ah, the nostalgic charm of my first website code! It's like a digital time capsule, capturing the essence of where it all began. While it may not be the most polished, it holds a special place in my coding journey.</p>
+                  <a href="https://github.com/PikachyDev/andreiixe.rf.gd" class="btn btn-primary">
+                    Source code
+                  </a>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Distopia Lite</h3>
+                  <p>[PHP, PYTHON]</p>
+                  <p>Introducing a blast from the past: a website tailored for old systems, facilitating Discord-web connections without server access. Tested on the venerable IE 5, it bridges the digital gap for vintage browsing experiences.</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">Files Andreiixe</h3>
+                  <p>[HTML]</p>
+                  <p>Welcome to my personal file storage space. Here, I store school files and pictures that I can't keep on my PC. Please note that this website is not secure, so use it accordingly. Feel free to access your files from anywhere, anytime.</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <svg class="bi" width="1em" height="1em"><use xlink:href="#source2"/></svg>
+                </div>
+                <div>
+                  <h3 class="fs-2">PikachyDev App</h3>
+                  <p>[C++, C#]</p>
+                  <p>Never released ;(</p>
+                </div>
+              </div>
+          <!--Close Content Website-->
+    </body>
 </html>
