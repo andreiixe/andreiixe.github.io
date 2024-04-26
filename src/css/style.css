@@ -29,3 +29,9 @@
     height: 3rem;
     border-radius: .75rem;
   }
+
+  /* issuse bug "About-me image not centered #2"*/
+  .imgaf {
+    max-width: 80%; 
+    height: auto;
+  }
