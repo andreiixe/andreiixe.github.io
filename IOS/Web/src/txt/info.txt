@@ -1,3 +1,7 @@
+Version 1.0 Beta 5.1 12 May 2024
+-Updated about, projects
+-Fixed about 
+
 Version 1.0 Beta 5 30 Mar 2024
 -Removed text decoration
 

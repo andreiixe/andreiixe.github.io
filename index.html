@@ -46,14 +46,24 @@
         <!--Close navbar-->
           <!--Content Website-->
             <div class="px-4 py-5 my-5 text-center">
-              <h1 class="display-5 fw-bold">Welcome to something new</h1>
+              <h1 class="display-5 fw-bold">Welcome to <span class="auto-input"></span></h1>
+              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+              <script>
+                let typed = new Typed(".auto-input", {
+                  strings: ["Andreiixe", "Macintosh", "Pikachu"],
+                  typeSpeed: 100,
+                  backSpeed: 100,
+                  loop: true
+                })
+              </script>
               <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">A little change like this once a year?</p>
-                <p class="lead mb-4">I don't have my pikachu anymore, I gave it away :'(</p>
+                <p class="lead mb-4">Breathe. Know that the Internet has no eraser.</p>
+                <p class="lead mb-4">My favorite music today :</p>
               </div>
               <div class="overflow-hidden" style="max-height: 30vh;">
                 <div class="container px-5">
-                  <img src="src/images/screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+                  <iframe width="160" height="515" class="img-fluid border rounded-3 shadow-lg mb-4" src="https://www.youtube.com/embed/HHa-blI30D0?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
               </div>
           </div>
