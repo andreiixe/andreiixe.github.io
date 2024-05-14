@@ -12,6 +12,8 @@
         <!--Bootstrap imports-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+        <!--import scripts custom-->
+        <script src="src/js/Randomizermusic.js"></script>
     </head>
     <body>
         <!--Navbar-->
@@ -62,8 +64,8 @@
                 <p class="lead mb-4">My favorite music today :</p>
               </div>
               <div class="overflow-hidden" style="max-height: 30vh;">
-                <div class="container px-5">
-                  <iframe width="160" height="515" class="img-fluid border rounded-3 shadow-lg mb-4" src="https://www.youtube.com/embed/HHa-blI30D0?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div id="videoContainer" class="video-container container px-5">
+                    <!-- Aici vine randomanizerul cu videurile -->
                 </div>
               </div>
           </div>
