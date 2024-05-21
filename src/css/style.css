@@ -30,11 +30,18 @@
     border-radius: .75rem;
   }
 
-  /* issuse bug "About-me image not centered #2"*/
+  /* fix rezolution */
+@media (max-width: 786px) {
   .imgaf {
-    max-width: 80%; 
+    min-width: 85%;
     height: auto;
   }
+}
+
+    /* issuse bug "About-me image not centered #2"*/
+    .imgaf {
+      max-width: 35%; 
+    }
 
   /* video randomizer */
   .video-container {
