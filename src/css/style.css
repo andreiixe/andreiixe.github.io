@@ -1,0 +1,51 @@
+.display-5 span{
+    background: linear-gradient(
+        to right,
+        #ff6a00,
+        #ee0979
+      );
+    -webkit-background-clip: text; /* um to work a fix "Also define the standard property 'background-clip' for compatibility" */
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+  }
+  
+  .icon-link > .bi {
+    margin-top: .125rem;
+    margin-left: .125rem;
+    fill: currentcolor;
+    transition: transform .25s ease-in-out;
+  }
+  .icon-link:hover > .bi {
+    transform: translate(.25rem);
+  }
+  
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+  }
+
+
+  /* fix rezolution */
+@media (max-width: 786px) {
+  .imgaf {
+    min-width: 85%;
+    height: auto;
+  }
+}
+
+    /* issuse bug "About-me image not centered #2"*/
+    .imgaf {
+      max-width: 35%; 
+    }
+
+  /* video randomizer */
+  .video-container {
+    width: 160px;
+    height: 160px;
+}
