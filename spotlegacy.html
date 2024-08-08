@@ -65,3 +65,96 @@
           <!--Close Footer-->
     </body>
 </html>
+static void DownloadAsync(const cc_string* url) {
+	cc_string etag = String_Empty;
+	cc_string time = String_Empty;
+
+	/* Only retrieve etag/last-modified headers if the file exists */
+	/* This inconsistency can occur if user deleted some cached files */
+	if (IsCached(url)) {
+		time = GetCachedLastModified(url);
+		etag = GetCachedETag(url);
+	}
+
+	Http_TryCancel(TexturePack_ReqID);
+	TexturePack_ReqID = Http_AsyncGetDataEx(url, HTTP_FLAG_PRIORITY, &time, &etag, NULL);
+}
+
+void TexturePack_Extract(const cc_string* url) {
+	if (url->length) DownloadAsync(url);
+
+	if (String_Equals(url, &TexturePack_Url)) return;
+	String_Copy(&TexturePack_Url, url);
+	TexturePack_ExtractCurrent(false);
+}
+
+
+working
+#include <stdlib.h>
+#include <string.h>
+
+// Define the proxy URL prefix
+#define PROXY_PREFIX "http://192.168.0.164:8080/?url="
+
+// Define or adjust these utility functions based on your string library
+cc_string String_FromRaw(const char* raw_str) {
+    cc_string str;
+    str.length = strlen(raw_str);
+    str.buffer = malloc(str.length + 1);
+    strcpy(str.buffer, raw_str);
+    return str;
+}
+
+cc_string String_Concat(const cc_string* str1, const cc_string* str2) {
+    cc_string result;
+    result.length = str1->length + str2->length;
+    result.buffer = malloc(result.length + 1);
+    strcpy(result.buffer, str1->buffer);
+    strcat(result.buffer, str2->buffer);
+    return result;
+}
+
+void String_Free(cc_string* str) {
+    free(str->buffer);
+    str->buffer = NULL;
+    str->length = 0;
+}
+
+int String_Equals(const cc_string* str1, const cc_string* str2) {
+    if (str1->length != str2->length) return 0;
+    return strcmp(str1->buffer, str2->buffer) == 0;
+}
+
+cc_string String_FromRawArray(const char* raw_str) {
+    return String_FromRaw(raw_str);
+}
+
+void DownloadAsync(const cc_string* url) {
+    cc_string etag = String_Empty;
+    cc_string time = String_Empty;
+
+    // Create proxy URL
+    cc_string proxy_prefix = String_FromRaw(PROXY_PREFIX);
+    cc_string full_url = String_Concat(&proxy_prefix, url);
+
+    // Only retrieve etag/last-modified headers if the file exists
+    if (IsCached(&full_url)) {
+        time = GetCachedLastModified(&full_url);
+        etag = GetCachedETag(&full_url);
+    }
+
+    Http_TryCancel(TexturePack_ReqID);
+    TexturePack_ReqID = Http_AsyncGetDataEx(&full_url, HTTP_FLAG_PRIORITY, &time, &etag, NULL);
+
+    // Free temporary strings
+    String_Free(&proxy_prefix);
+    String_Free(&full_url);
+}
+
+void TexturePack_Extract(const cc_string* url) {
+    if (url->length) DownloadAsync(url);
+
+    if (String_Equals(url, &TexturePack_Url)) return;
+    String_Copy(&TexturePack_Url, url);
+    TexturePack_ExtractCurrent(false);
+}
