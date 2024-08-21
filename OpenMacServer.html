@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+    <head>
+        <!--Title Website-->
+        <title>Andreiixe Website</title>
+        <!--Icon Website-->
+        <link rel="shortcut icon" type="image/jpg" href="src/icon/andreiixe.ico"/>
+        <!--View Port for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <!--Bootstrap imports-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary"> 
+          <div class="container-fluid text-success"> 
+              <button class="navbar-toggler"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gfgnavbar"> 
+                  <span class="navbar-toggler-icon"> 
+                  </span> 
+              </button> 
+              <div class="collapse navbar-collapse justify-content-center" 
+                   id="gfgnavbar">
+              <!-- Left links -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about-me.html">About-me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="OpenMacServer.html">ClassiCube Server</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Projects.html">Projects</a>
+                  </li>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        const htmlElement = document.documentElement;
+                
+                        // Funcție pentru a determina tema pe baza orei curente
+                        function getThemeBasedOnTime() {
+                            const currentHour = new Date().getHours();
+                            // Dark mode între 17:00 și 08:00
+                            return (currentHour >= 17 || currentHour < 8) ? 'dark' : 'light';
+                        }
+                
+                        // Setează tema inițială
+                        const currentTheme = localStorage.getItem('bsTheme') || getThemeBasedOnTime();
+                        htmlElement.setAttribute('data-bs-theme', currentTheme);
+                        localStorage.setItem('bsTheme', currentTheme);
+                    });
+                </script>
+              <!-- Left links -->
+              </div> 
+          </div> 
+      </nav> 
+        <!--Close navbar-->
+          <!--Content Website-->
+          <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-6 fw-bold text-body-emphasis"><span>[Power PC]</span> OpenMac Server</h1>
+            <p>Screenshot Archive</p>
+            <div class="col-lg-6 mx-auto">
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+              <div class="container px-5">
+                <img src="src/images/classicube/Main.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <!--main-->
+          <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day1.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">It's the first day of the server. After it was griefed several times, I decided to ban that person and start building things on this server.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day2.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">Day 2: I decided to make a Pikachu for fun to bring something cute to the server. I probably should have added more things :))</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day3.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">Day 3: I had decided to create something memorial due to the repeated griefing, and I made this building to be something special on this server.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day4.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">Day 4: I had repaired the Power Mac G5 that was destroyed due to the griefing, but I managed to rebuild it with some cool and nice details. Oh, and let's not forget the 'Hi' at the back, which was also made by another user.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day5.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">Day 5: I seriously got into pixel art and made a Macintosh, Gojo, and a character from an anime that I can't remember :'(</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/Day6.png"></img>
+                  <div class="card-body">
+                    <p class="card-text">Day 6: I modified the server to have more blocks, updated a few builds that I had made, and created another pixel art of Naruto. Then a user came and built a white Imac G4 and something else, I don't know what it is.</p>
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                </div>
+                <div class="col-lg-6">
+                  <h1 class="display-5 fw-bold lh-1 mb-3"><span>Users</span> joined the server and built.</h1>
+                </div>
+              </div>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="src/images/classicube/users/clygro.png"></img>
+                    <div class="card-body">
+                      <p class="card-text">Clygro is a user who built a G5, but it was destroyed. On day 6, he built a white iMac G4 and something that I don't know what it means. :'( Sorry, Clygro.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <!--Close Content Website-->
+          <!--Footer-->
+          <div class="container">
+            <footer class="py-3 my-4">
+              <p class="text-center text-muted">&copy; 2024 Andreiixe</p>
+            </footer>
+          </div>
+          <!--Close Footer-->
+    </body>
+</html>
