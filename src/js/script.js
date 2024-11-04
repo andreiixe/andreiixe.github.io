@@ -1,10 +1,10 @@
 window.onload = function() {
     var videos = [
-        "https://www.youtube.com/embed/VVLAnjtpXeM",
-        "https://www.youtube.com/embed/6v5AW6FMXig",
-        "https://www.youtube.com/embed/uZjIkMT-bZk",
-        "https://www.youtube.com/embed/oQ8PI-YNGMM",
-        "https://www.youtube.com/embed/hbcGx4MGUMg"
+        "https://www.youtube.com/embed/Rc43Locn-YU", //updated 1
+        "https://www.youtube.com/embed/FwkY6zKqxc8", //updated 2
+        "https://www.youtube.com/embed/Pg8RK1SnRRI", //updated 3
+        "https://www.youtube.com/embed/oQ8PI-YNGMM", //
+        "https://www.youtube.com/embed/hbcGx4MGUMg" //
     ];
 
     var randomIndex = Math.floor(Math.random() * videos.length);
