@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html data-bs-theme="light">
     <head>
         <!--Title Website-->
@@ -18,43 +17,71 @@
     <body>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary"> 
-          <div class="container-fluid text-success"> 
-              <button class="navbar-toggler"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#gfgnavbar"> 
+          <div class="container-fluid text-success d-flex justify-content-between">
+              <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#gfgnavbar"> 
                   <span class="navbar-toggler-icon"> 
                   </span> 
               </button> 
-              <div class="collapse navbar-collapse justify-content-center" 
-                   id="gfgnavbar">
-              <!-- Left links -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about-me.html">About-me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="Projects.html" aria-current="page">Projects</a>
-                  </li>
-                  <script>
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                        const htmlElement = document.documentElement;
-                
-                        // Funcție pentru a determina tema pe baza orei curente
-                        function getThemeBasedOnTime() {
-                            const currentHour = new Date().getHours();
-                            // Dark mode între 17:00 și 08:00
-                            return (currentHour >= 17 || currentHour < 8) ? 'dark' : 'light';
-                        }
-                
-                        // Setează tema inițială
-                        const currentTheme = localStorage.getItem('bsTheme') || getThemeBasedOnTime();
-                        htmlElement.setAttribute('data-bs-theme', currentTheme);
-                        localStorage.setItem('bsTheme', currentTheme);
-                    });
-                </script>
+              <div class="collapse navbar-collapse justify-content-center" id="gfgnavbar">
+                  <!-- Left links -->
+                  <ul class="navbar-nav mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="about-me.html">About-me</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" href="Projects.html">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                  </ul>
+              </div>
+              <!-- Theme Switcher Button (aligned to the right) -->
+              <button id="themeSwitcher" class="btn btn-outline-secondary">
+                  Dark Mode
+              </button>
+          </div> 
+      </nav> 
+
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const htmlElement = document.documentElement;
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            
+            // Function to get theme from cookie
+            function getThemeFromCookie() {
+                const themeCookie = document.cookie.split('; ').find(row => row.startsWith('theme='));
+                return themeCookie ? themeCookie.split('=')[1] : 'light'; // Default to light if no cookie
+            }
+
+            // Function to set the theme in a cookie
+            function setThemeCookie(theme) {
+                document.cookie = `theme=${theme}; path=/; max-age=31536000`; // 1 year expiration
+            }
+
+            // Function to update the theme and button text
+            function updateTheme(theme) {
+                htmlElement.setAttribute('data-bs-theme', theme);
+                setThemeCookie(theme);
+                // Update the button text based on the theme
+                themeSwitcher.textContent = theme === 'dark' ? 'White' : 'Dark';
+            }
+
+            // Initialize the theme from cookie
+            const savedTheme = getThemeFromCookie();
+            updateTheme(savedTheme);
+
+            // Add event listener to toggle theme
+            themeSwitcher.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-bs-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                updateTheme(newTheme);
+            });
+        });
+      </script>
               <!-- Left links -->
               </div> 
           </div> 

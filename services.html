@@ -26,7 +26,7 @@
                   <!-- Left links -->
                   <ul class="navbar-nav mb-2 mb-lg-0">
                       <li class="nav-item">
-                          <a class="nav-link active" href="index.html">Home</a>
+                          <a class="nav-link" href="index.html">Home</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="about-me.html">About-me</a>
@@ -35,7 +35,7 @@
                           <a class="nav-link" href="Projects.html">Projects</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link active" href="services.html">Services</a>
                     </li>
                   </ul>
               </div>
@@ -83,29 +83,50 @@
         });
       </script>
         <!--Close navbar-->
-          <!--Content Website-->
-            <div class="px-4 py-5 my-5 text-center">
-              <h1 class="display-5 fw-bold">Welcome to <span class="auto-input"></span></h1>
-              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-              <script>
-                let typed = new Typed(".auto-input", {
-                  strings: ["Andreiixe", "Macintosh", "Pikachu", ":)", "hell"],
-                  typeSpeed: 100,
-                  backSpeed: 100,
-                  loop: true
-                })
-              </script>
-              <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Some other update.. hm.. empty here 👀</p>
-                <p class="lead mb-4">My favorite music today :</p>
-              </div>
-              <div class="overflow-hidden" style="max-height: 30vh;">
-                <div id="videoContainer" class="video-container container px-5">
-                    <!-- Aici vine randomanizerul cu videurile -->
+        <br>
+        
+        <div class="container mt-5">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3"><span>Services</span> :D</h1>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <!-- Titlul cu link pentru a activa collapse -->
+                    <h4 class="my-0 font-weight-normal" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#proxyDetails" aria-expanded="false" aria-controls="proxyDetails">
+                        PPCProxy (ClassiCube Proxy for downloading resources and texture packs for older systems)
+                    </h4>
+                    <span id="status-indicator" class="badge bg-secondary">Checking...</span>
                 </div>
-              </div>
-          </div>
+                <div id="proxyDetails" class="collapse">
+                    <div class="card-body">
+                        <iframe id="proxyIframe" src="http://pikaiixe.ddns.net:5090/status" width="100%" height="400" style="border: none;">
+                            Your browser does not support the iframe element.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            // Verificarea dacă iframe-ul este online sau offline
+            document.addEventListener("DOMContentLoaded", function() {
+                const iframe = document.getElementById("proxyIframe");
+                const statusIndicator = document.getElementById("status-indicator");
+        
+                // Setare event listener pentru încercarea de încărcare a iframe-ului
+                iframe.onload = function() {
+                    statusIndicator.textContent = "Online";
+                    statusIndicator.classList.replace("bg-secondary", "bg-success");
+                };
+                
+                iframe.onerror = function() {
+                    statusIndicator.textContent = "Offline";
+                    statusIndicator.classList.replace("bg-secondary", "bg-danger");
+                };
+            });
+        </script>
           <!--Close Content Website-->
           <!--Footer-->
           <div class="container">
